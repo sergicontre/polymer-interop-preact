@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-poly-component">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Polymer component</h1>
+      <div class="circle">🤘</div>
+      <h2>{{text}}</h2>
+      <button on-click="handleClick">Send Event</button>
+    </div>
+  </template>
+
+  <script>
+    class MyPolyComponent extends Polymer.Element {
+      static get is() { return 'my-poly-component'; }
+      static get properties() {
+        return {
+          text: {
+            type: String,
+            value: 'Polymer Rocks!'
+          }
+        }
+      }
+      handleClick() {
+        this.dispatchEvent(new CustomEvent('kick', {detail: {kicked: true}}));
+      }
+    }
+
+    window.customElements.define(MyPolyComponent.is, MyPolyComponent);
+  </script>
+</dom-module>

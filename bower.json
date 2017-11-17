@@ -1,0 +1,25 @@
+{
+  "name": "preact-boilerplate",
+  "description": "Ready-to-go Preact starter project powered by webpack.",
+  "main": "",
+  "authors": [
+    "Jason Miller <jason@developit.ca>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "preact",
+    "boilerplate",
+    "webpack"
+  ],
+  "homepage": "https://github.com/developit/preact-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.2.0"
+  }
+}
